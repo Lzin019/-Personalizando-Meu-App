@@ -48,4 +48,4 @@ A interface principal foi construída com componentes totalmente estilizados e m
 
 1. **Clone este repositório:**
    ```bash
-   git clone [https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git](https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git)
+   git clone [[https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git](https://github.com/SEU-USUARIO/SEU-REPOSITORIO.git)](https://github.com/Lzin019/-Personalizando-Meu-App)
