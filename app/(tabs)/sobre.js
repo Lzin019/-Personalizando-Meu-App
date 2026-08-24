@@ -5,7 +5,7 @@ export default function Sobre() {
         <ScrollView contentContainerStyle={styles.container}>
             <Image
                 source={{
-                    uri: 'https://scontent.cdninstagram.com/v/t51.82787-19/768619838_18101185202352979_337373834154001846_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_cat=110&ccb=7-5&_nc_sid=f7ccc5&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=rtk2JAHhFmMQ7kNvwE6b7yF&_nc_oc=Adr8vwgoe1hlZmHCl0j15RY5Hqc_IfFugMca7e-WQ7F-bJn0EUEnksOhL1hLCY4HJ30&_nc_zt=24&_nc_ht=scontent.cdninstagram.com&_nc_gid=wews78qTivJT3v3kUsXC8Q&_nc_ss=7b689&oh=00_AQG_7dNBEGyuaMynGgqkQjO4wwmeSeOnzpceFk5wxAbNaA&oe=6A891FEC',
+                    uri: 'https://instagram.fcgh1-1.fna.fbcdn.net/v/t51.82787-19/783707428_18102712670352979_6357914631535095060_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby4xMDgwLmMyIn0&_nc_ht=instagram.fcgh1-1.fna.fbcdn.net&_nc_cat=107&_nc_oc=Q6cZ2gFtuyIclR0Tn4KcZVqYjtwGDWaoDCQrCBKJ4XuFgJNuEGoqKZoyM3sEX7mut7o59Pg&_nc_ohc=S06lIij8FYwQ7kNvwEl7boo&_nc_gid=AchIAXyn17Aa-PtNjdX7lA&edm=AP4sbd4BAAAA&ccb=7-5&oh=00_AQEP_UA_1gfp2zA30Per474yeaQZ5nJu8x5tM_IM9Cr7wA&oe=6A92392E&_nc_sid=7a9f4b',
                 }}
                 style={styles.image}
             />
