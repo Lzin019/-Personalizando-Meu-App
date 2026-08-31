@@ -11,13 +11,7 @@ export default function TabsLayout() {
                     fontWeight: '600',
                 },
             }}>
-            <Tabs.Screen
-                name="interface"
-                options={{
-                    title: 'Interface',
-                    headerTitle: 'Interface',
-                }}
-            />
+            
             <Tabs.Screen
                 name="index"
                 options={{
@@ -25,6 +19,15 @@ export default function TabsLayout() {
                     headerTitle: 'Projeto Base',
                 }}
             />
+            
+            <Tabs.Screen
+                name="interface"
+                options={{
+                    title: 'Interface',
+                    headerTitle: 'Interface',
+                }}
+            />
+
             <Tabs.Screen
                 name="aulas"
                 options={{

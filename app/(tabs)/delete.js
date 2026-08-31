@@ -129,7 +129,7 @@ export default function JogosExcluirScreen() {
 }
 
 const styles = StyleSheet.create({
-  safeArea: { flex: 1, backgroundColor: "#f8fbff" },
+  safeArea: { flex: 1, backgroundColor: "#5be6ac" },
   conteudo: { padding: 24, paddingBottom: 48 },
   header: { marginBottom: 16 },
   tituloPagina: { fontSize: 24, fontWeight: "800", color: "#102542" },

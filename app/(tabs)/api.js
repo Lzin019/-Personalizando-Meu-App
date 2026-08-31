@@ -66,7 +66,7 @@ export default function JogosListarScreen() {
 }
 
 const styles = StyleSheet.create({
-  safeArea: { flex: 1, backgroundColor: "#f8fbff" }, // ocupa a tela toda, cor de fundo clara
+  safeArea: { flex: 1, backgroundColor: "#5be6ac" }, // ocupa a tela toda, cor de fundo clara
   conteudo: { padding: 24, paddingBottom: 48 }, // respiro nas bordas do conteúdo
   header: { marginBottom: 16 }, // espaço abaixo do cabeçalho
   tituloPagina: { fontSize: 24, fontWeight: "800", color: "#102542" }, // título grande e escuro
