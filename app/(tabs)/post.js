@@ -11,13 +11,8 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import axios from "axios";
 
-// Em produção, uma chave de API não deveria morar direto no código do
-// app (dá pra extrair de qualquer APK/IPA instalado). Aqui, como é uma
-// API pública de estudo, deixamos direto no código pra simplificar.
 const API_KEY = "cv_iiGxAQJtukYyu3FWigTuP6YGn0p10Bxgxjdn16DF13ZSlBR3g7Msg-txhMsixadT";
 
-// Mesma instância do axios usada na tela de listagem, com o header já
-// configurado — toda chamada feita com "api" já sai autenticada.
 const api = axios.create({
   baseURL: "https://api-ds.codeverse.dev.br",
   headers: {
@@ -25,12 +20,6 @@ const api = axios.create({
   },
 });
 
-// ---------- POST: criar um herói novo ----------
-// Payload confirmado pra este tema: title, description e imageUrl
-// (genéricos) + universo, editora e grupo_principal (específicos do
-// tema heróis). category, year, ano_de_estreia, tipo_de_heroi e
-// situacao_do_heroi aparecem na documentação, mas não fazem parte do
-// corpo que a rota de criação realmente aceita.
 export default function JogosCriarScreen() {
   const [titulo, setTitulo] = useState("");
   const [descricao, setDescricao] = useState("");
@@ -38,6 +27,8 @@ export default function JogosCriarScreen() {
   const [estudio, setEstudio] = useState("");
   const [plataforma, setPlataforma] = useState("");
   const [genero, setGenero] = useState("");
+
+  const [anoLancamento, setAnoLancamento] = useState("");
 
   const [enviando, setEnviando] = useState(false);
 
@@ -49,23 +40,30 @@ export default function JogosCriarScreen() {
 
     setEnviando(true);
     try {
+
       const resposta = await api.post("/api/jogos", {
         title: titulo,
         description: descricao,
         imageUrl: imagemUrl,
-        studio: estudio,
-        platform: plataforma,
-        genre: genero,
+        desenvolvedora: estudio, 
+        plataforma: plataforma,
+        genero: genero,
+        ano_lancamento: anoLancamento, 
       });
 
       Alert.alert("Jogo criado!", resposta.data.title);
+
       setTitulo("");
       setDescricao("");
       setImagemUrl("");
       setEstudio("");
       setPlataforma("");
       setGenero("");
+      setAnoLancamento(""); 
+      
     } catch (e) {
+
+      console.log("ERRO DA API:", e.response?.data || e.message);
       Alert.alert(
         "Não deu pra criar o jogo",
         "A API respondeu com erro. Confere se todos os campos estão certinhos e tenta de novo."
@@ -96,7 +94,7 @@ export default function JogosCriarScreen() {
           style={styles.campo}
           value={descricao}
           onChangeText={setDescricao}
-          placeholder="Ex: O Cavaleiro das Trevas enfrenta o Espantalho em Gotham City."
+          placeholder="Ex: O Cavaleiro das Trevas enfrenta o Espantalho..."
         />
 
         <Text style={styles.rotulo}>URL da imagem</Text>
@@ -109,7 +107,7 @@ export default function JogosCriarScreen() {
 
         <Text style={styles.secao}>Campos específicos do tema jogos</Text>
 
-        <Text style={styles.rotulo}>Estúdio</Text>
+        <Text style={styles.rotulo}>Desenvolvedora (Estúdio)</Text>
         <TextInput
           style={styles.campo}
           value={estudio}
@@ -131,6 +129,15 @@ export default function JogosCriarScreen() {
           value={genero}
           onChangeText={setGenero}
           placeholder="Ex: RPG"
+        />
+
+        <Text style={styles.rotulo}>Ano de Lançamento</Text>
+        <TextInput
+          style={styles.campo}
+          value={anoLancamento}
+          onChangeText={setAnoLancamento}
+          placeholder="Ex: 2015"
+          keyboardType="numeric"
         />
 
         <Pressable style={styles.botao} onPress={criarJogo} disabled={enviando}>
