@@ -3,7 +3,7 @@ import { View, Text, Image, ActivityIndicator, ScrollView, StyleSheet } from "re
 import axios from "axios" // lib usada pra fazer chamadas HTTP para API
 import { SafeAreaView } from "react-native-safe-area-context" // evita que conteudo fique embaixo do notch/barra do celular
 
-const API_KEY = "cv_iiGxAQJtukYyu3FWigTuP6YGn0p10Bxgxjdn16DF13ZSlBR3g7Msg-txhMsixadT" // chave da API, que você deve gerar no site do Codeverse
+const API_KEY = "cv_pTNvM2iwLF77uLunS1wlI0J078tX2nQlimfmMDMP9E5chsiS9uLeFtMHB1GwBM7L" // chave da API, que você deve gerar no site do Codeverse
 
 const api = axios.create({
   baseURL: "https://api-ds.codeverse.dev.br",
@@ -69,7 +69,7 @@ const styles = StyleSheet.create({
   safeArea: { flex: 1, backgroundColor: "#5be6ac" }, // ocupa a tela toda, cor de fundo clara
   conteudo: { padding: 24, paddingBottom: 48 }, // respiro nas bordas do conteúdo
   header: { marginBottom: 16 }, // espaço abaixo do cabeçalho
-  tituloPagina: { fontSize: 24, fontWeight: "800", color: "#102542" }, // título grande e escuro
+  tituloPagina: { fontSize: 24, fontWeight: "800", color: "#315734" }, // título grande e escuro
   subtitulo: { fontSize: 14, color: "#5f6b7a", marginTop: 2 }, // texto menor e mais claro, abaixo do título
 
   erro: { color: "#c62828", marginTop: 12 }, // texto de erro em vermelho

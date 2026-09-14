@@ -14,7 +14,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import axios from "axios";
 
 const API_KEY =
-  "cv_iiGxAQJtukYyu3FWigTuP6YGn0p10Bxgxjdn16DF13ZSlBR3g7Msg-txhMsixadT";
+  "cv_pTNvM2iwLF77uLunS1wlI0J078tX2nQlimfmMDMP9E5chsiS9uLeFtMHB1GwBM7L";
 
 const api = axios.create({
   baseURL: "https://api-ds.codeverse.dev.br",
@@ -110,10 +110,10 @@ export default function JogosBuscarScreen() {
 }
 
 const styles = StyleSheet.create({
-  safeArea: { flex: 1, backgroundColor: "#f8fbff" },
+  safeArea: { flex: 1, backgroundColor: "#5be6ac" },
   conteudo: { padding: 24, paddingBottom: 48 },
   header: { marginBottom: 16 },
-  tituloPagina: { fontSize: 24, fontWeight: "800", color: "#102542" },
+  tituloPagina: { fontSize: 24, fontWeight: "800", color: "#315734" },
   subtitulo: { fontSize: 14, color: "#5f6b7a", marginTop: 2 },
 
   rotulo: {
