@@ -5,7 +5,7 @@ export default function Sobre() {
         <ScrollView contentContainerStyle={styles.container}>
             <Image
                 source={{
-                    uri: 'https://instagram.fcgh1-1.fna.fbcdn.net/v/t51.82787-19/785282135_18103105694352979_2250156585623724820_n.jpg?stp=dst-jpg_s150x150_tt6&_nc_cat=109&ccb=7-5&_nc_sid=f7ccc5&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy4xMDgwLkMzIn0%3D&_nc_ohc=Nf4sIOCrBygQ7kNvwHfYvir&_nc_oc=AdrT5aUeVsVzYLRKehIyd8vcWlobbmR7nd_JCwofZ6Lh8Ha3U0_8mbeB77dlZl38Cwc&_nc_zt=24&_nc_ht=instagram.fcgh1-1.fna&_nc_gid=Iamj9kM64sMRmHA79vO-rw&_nc_ss=7a6a8&oh=00_AQJnrurolDvb0FEUvLtdczJ9Sen40FVkTEDf_fhDUzv6AA&oe=6A9BB4DC',
+                    uri: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRatExXVMPsO1jyxNnRjiHHlHWJxhaRCVOpdx71f52ug&s=10',
                 }}
                 style={styles.image}
             />

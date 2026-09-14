@@ -27,8 +27,8 @@ export default function JogosCriarScreen() {
   const [estudio, setEstudio] = useState("");
   const [plataforma, setPlataforma] = useState("");
   const [genero, setGenero] = useState("");
-
   const [anoLancamento, setAnoLancamento] = useState("");
+  const [desenvolvedora, setDesenvolvedora] = useState("");
 
   const [enviando, setEnviando] = useState(false);
 
@@ -45,7 +45,7 @@ export default function JogosCriarScreen() {
         title: titulo,
         description: descricao,
         imageUrl: imagemUrl,
-        desenvolvedora: estudio, 
+        desenvolvedora: desenvolvedora, 
         plataforma: plataforma,
         genero: genero,
         ano_lancamento: anoLancamento, 
