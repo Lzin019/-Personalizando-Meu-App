@@ -12,13 +12,8 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import axios from "axios";
 
-// Em produção, uma chave de API não deveria morar direto no código do
-// app (dá pra extrair de qualquer APK/IPA instalado). Aqui, como é uma
-// API pública de estudo, deixamos direto no código pra simplificar.
 const API_KEY = "cv_iiGxAQJtukYyu3FWigTuP6YGn0p10Bxgxjdn16DF13ZSlBR3g7Msg-txhMsixadT ";
 
-// Mesma instância do axios usada nas outras telas, com o header já
-// configurado — toda chamada feita com "api" já sai autenticada.
 const api = axios.create({
   baseURL: "https://api-ds.codeverse.dev.br",
   headers: {
@@ -26,10 +21,6 @@ const api = axios.create({
   },
 });
 
-// ---------- PUT: editar um jogo existente ----------
-// Pra editar, primeiro precisamos saber QUAL jogo — por isso a tela
-// começa mostrando a lista e só depois de tocar em um item é que
-// aparece o formulário, já preenchido com os dados atuais.
 export default function JogosEditarScreen() {
   const [jogos, setJogos] = useState([]);
   const [carregando, setCarregando] = useState(true);
@@ -98,11 +89,10 @@ export default function JogosEditarScreen() {
         ano_lancamento: anoLancamento,
       });
 
-      // Esta API devolve o registro atualizado dentro de "data".
       Alert.alert("Jogo atualizado!", resposta.data.data.title);
 
       setSelecionado(null);
-      buscarJogos(); // recarrega a lista com o dado novo
+      buscarJogos(); 
     } catch (e) {
       Alert.alert(
         "Não deu pra atualizar o jogo",
